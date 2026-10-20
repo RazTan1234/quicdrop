@@ -1,0 +1,16 @@
+[package]
+name = "quicdrop"
+description = "Fast, secure file transfer over QUIC, built for bad networks"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[dependencies]
+quicdrop-core.workspace = true
+clap.workspace = true
+
+[lints]
+workspace = true

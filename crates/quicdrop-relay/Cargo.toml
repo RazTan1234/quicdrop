@@ -1,0 +1,16 @@
+[package]
+name = "quicdrop-relay"
+description = "Relay server that connects quicdrop peers behind NAT"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+publish = false
+
+[dependencies]
+quicdrop-core.workspace = true
+
+[lints]
+workspace = true
