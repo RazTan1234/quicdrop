@@ -52,7 +52,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@1.85
+      # Pinned via `toolchain:` rather than `@1.85`: Dependabot mistakes a
+      # Rust version in the ref for an action version and tries to "bump" it.
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.85"
       - uses: Swatinem/rust-cache@v2
       - run: cargo check --workspace
 
